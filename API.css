@@ -1,0 +1,42 @@
+body{
+    color: white;
+    background-image: linear-gradient(to bottom right, rgb(41, 43, 53), darkgrey);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: raleway, sans-serif;
+}
+
+body h2{
+    font-family: righteous, sans-serif;
+}
+
+form{
+    padding: 0%;
+}
+
+.filmSection{
+    margin-top: 15vh;
+    position: absolute;
+}
+.charSection{
+    position: relative;
+    margin: 20vh 0vw 0vh 50vw
+}
+
+#filmForm{
+    position: absolute;
+    margin-top: 5vh;
+    margin-left: 32vw;
+}
+
+#charForm{
+    position: absolute;
+    margin-top: 5vh;
+    margin-left: 52vw;
+}
+
+#or{
+    position: absolute;
+    margin-top: 5vh;
+    margin-left: 48vw;
+}
