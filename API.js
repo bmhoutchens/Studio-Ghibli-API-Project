@@ -192,7 +192,7 @@ function fetchCharacterInFilm(peopleArray){
         let array = Object.keys(json)
         console.log(array);
         if(array[1] == "name"){
-            li.innerHTML = "Staring: " + json.name;
+            li.innerHTML = "Starring: " + json.name;
             testUl.appendChild(li);
         }
     });
