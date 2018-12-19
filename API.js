@@ -25,6 +25,7 @@ function fetchFilms(e){
     .then(function(result){
         return result.json();
     }).then(function(json){
+        console.log(json);
         findTitle(json);
     });
     
@@ -45,6 +46,7 @@ function fetchCharacters(e){
 
 //This finds the correct title to display.
 function findTitle(json){
+    console.log(json);
     let list = document.getElementById("myList");
     if(list != null){
         while (list.hasChildNodes()) {
@@ -55,15 +57,15 @@ function findTitle(json){
     while(section.firstChild){
         section.removeChild(section.firstChild);
     };
-
-    for(i = 0; i < json.length; i++){
-        let jsonArrayTitle = json[i].title
+    
+    for(i = 0; i < json.length; i ++){
+        let jsonArrayTitle = json[i].title;
 
         if(film.value.toLowerCase() == jsonArrayTitle.toLowerCase()){
             section.appendChild(testH4);
             section.appendChild(para);
             para.setAttribute("id", "description");
-            document.getElementById("description").style.margin = "0vw 50vw 0vw 0vw";
+            document.getElementById("description").style.margin = "0vh 50vw 0vh 0vw";
             section.appendChild(testUl);
             testUl.setAttribute("id","myList");
 
@@ -160,6 +162,7 @@ function fetchCharacterFilm(filmsUrl){
     }).then(function(json){
         li.innerHTML = "Film: " + json.title;
         ul.appendChild(li);
+        console.log(json);
     });
     
 }
@@ -184,7 +187,7 @@ function fetchCharacterInFilm(peopleArray){
     .then(function(result){
         return result.json();
     }).then(function(json){
-
+        console.log(json);
 
         let array = Object.keys(json)
         console.log(array);
